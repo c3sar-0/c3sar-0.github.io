@@ -1,0 +1,24 @@
+body {
+	margin: 0 0 0 0;
+	border: None;
+}
+.img_container {
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	background-color: black;
+	height: 100%;
+}
+.peepo {
+	width: 300px;
+	height: 300px;
+}
+.text {
+	padding-top: 50px;
+	font-family: Arial;
+	text-align: center;
+	background-color: black;
+	color: white;
+	font-weight: bold;
+	font-size: 18;
+}
