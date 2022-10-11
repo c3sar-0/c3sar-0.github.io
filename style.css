@@ -3,8 +3,10 @@ body {
 	border: None;
 	backgound-color: black;
 }
-.ng-app-embedded{
+.player-container{
+	display: flex;
 	background-color: black;
+	justify-content: center;
 }
 .img_container {
 	display: flex;
