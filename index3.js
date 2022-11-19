@@ -20,7 +20,7 @@ class Circle {
         this.theta0 = Math.atan((x-this.axisX) / (y-this.axisY))
     }
 
-    draw(context) {
+    draw(context, theta) {
         context.beginPath();
         context.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
         context.fillStyle = 'green';
@@ -29,6 +29,9 @@ class Circle {
         context.lineWidth = 5;
         context.stroke();
         context.closePath();
+        
+        context.font = "bold 16px sans-serif";
+        context.fillText("Theta (º): " + Math.round(theta*180/Math.PI), 20, 30);
         
         context.beginPath();
         context.moveTo(this.axisX, this.axisY);
@@ -40,8 +43,6 @@ class Circle {
     update(context) {
         context.clearRect(0, 0, window_width, window_height);
 
-        this.draw(context);
-
         var b = 0.007;
         var m = 10;
         var t = Date.now() - this.time;
@@ -49,6 +50,8 @@ class Circle {
         //var theta = this.theta0 * Math.sin((9.8/(this.length/0.07)) * t + theta0)
         this.x = this.length * Math.sin(theta) + this.axisX;
         this.y = this.length * Math.cos(theta) + this.axisY;
+        
+        this.draw(context, theta);
     }
 }
 
