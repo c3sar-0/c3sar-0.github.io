@@ -1,15 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>jstests</title>
-    <link rel="shortcut icon" href="#">
-</head>
-<body>
-    <canvas id="myCanvas" width="645" height="400"
-    style="border: 5px solid #000000;">this is the canvas</canvas>
-    <script src="index3.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>c3sar</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="bg-img-box">
+      <img src="images/coding-on-laptop.jpg" alt="background" class="bg-img" />
+    </div>
+    <header class="header">
+      <h1 class="header__title">c3sar</h1>
+      <nav class="header__nav">
+        <a
+          href="https://github.com/WashingtonCC"
+          id="github-contact"
+          target="blank"
+        >
+          <div class="header__contact-img">
+            <img src="images/github-white.png" alt="github" />
+          </div>
+        </a>
+        <a href="mailto:aa4549807@gmail.com" id="email-contact" target="blank">
+          <div class="header__contact-img">
+            <img src="images/gmail.png" alt="gmail" />
+          </div>
+        </a>
+      </nav>
+    </header>
+    <main class="main">
+      <div class="main__desc card">
+        <div class="main__desc-photo">
+          <img src="images/cv-photo.png" alt="cv photo" />
+        </div>
+        <div>
+          <div class="title-box">
+            <h1 class="title title-1">whoami.</h1>
+          </div>
+          <div class="main__desc-body">
+            <p>
+              Hey! My name is César. I am a passionate web developer looking for
+              my first work experience to further enhance my skills and
+              knowledge. I have a solid foundation in web development concepts
+              and frameworks. My goal is to learn and grow alongside experienced
+              professionals in the field to become a proficient web developer.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="main__skills card">
+        <div class="title-box">
+          <h1 class="title title-2">skills.</h1>
+        </div>
+        <div class="main__skills-imgs-box">
+          <div class="main__skill-img main__skill-img-1">
+            <img src="images/html.png" />
+          </div>
+          <div class="main__skill-img main__skill-img-2">
+            <img src="images/css.png" />
+          </div>
+          <div class="main__skill-img main__skill-img-3">
+            <img src="images/js.png" />
+          </div>
+          <div class="main__skill-img main__skill-img-4">
+            <img src="images/react.png" />
+          </div>
+          <div class="main__skill-img main__skill-img-5">
+            <img src="images/python.png" />
+          </div>
+          <div class="main__skill-img main__skill-img-6">
+            <img src="images/django.png" />
+          </div>
+        </div>
+      </div>
+
+      <div class="main__education card">
+        <div class="title-box">
+          <h1 class="title title-3">education.</h1>
+        </div>
+        <div class="main__education-body">
+          <ul>
+            <li>
+              <h4>
+                1st year of Computer Engineering at FING, UDELAR (coursing)
+              </h4>
+            </li>
+            <li><h4>Jóvenes a Programar (coursing phase two)</h4></li>
+            <li>
+              <h4>
+                Udemy courses on: Advanced CSS/SASS, Django, Django REST
+                Framework, JavaScript, React.JS
+              </h4>
+            </li>
+            <li><h4>C1 Advanced English Certificate</h4></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="main__proyects">
+        <div class="title-box card">
+          <h1 class="title title-4">projects.</h1>
+        </div>
+        <div class="main__proyects-body">
+          <div class="main__proyect-video card">
+            <video src="videos/bb.mp4" autoplay loop muted></video>
+            <p>
+              <em><strong>ByteBusters</strong></em> is a blog page created to
+              have fun and share interesting things with the world. Anything you
+              like or find fascinating, post it! You can interact with people,
+              read and create posts and much more!
+            </p>
+            <p>
+              <strong>Technologies:</strong> HTML, CSS (SASS), React.JS, Django,
+              PostgreSQL, Docker.
+            </p>
+          </div>
+
+          <div class="main__proyect-video card">
+            <video src="videos/maze.mp4" autoplay loop muted></video>
+            <p>
+              <em><strong>Maze</strong></em> is a Python program that takes as
+              input two dimensions, generates a maze with those dimensions, and
+              saves it to a png.
+            </p>
+            <p><strong>Technologies:</strong> Python.</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <p>
+      Photo by
+      <a
+        href="https://burst.shopify.com/@matthew_henry?utm_campaign=photo_credit&amp;utm_content=Free+Coding+On+Laptop+Image%3A+Browse+1000s+of+Pics&amp;utm_medium=referral&amp;utm_source=credit"
+        >Matthew Henry</a
+      >
+      from
+      <a
+        href="https://burst.shopify.com/computer?utm_campaign=photo_credit&amp;utm_content=Free+Coding+On+Laptop+Image%3A+Browse+1000s+of+Pics&amp;utm_medium=referral&amp;utm_source=credit"
+        >Burst</a
+      >
+    </p>
+    <footer class="footer">footer</footer>
+  </body>
 </html>

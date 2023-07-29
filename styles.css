@@ -1,0 +1,403 @@
+* {
+  margin: 0;
+  padding: 0;
+
+  --snow: #fffbfeff;
+  --emerald: #26c485ff;
+  --dark-cyan: #32908fff;
+  --blue: #724cf9ff;
+  --black: #000000ff;
+
+  --gradient-top: linear-gradient(
+    0deg,
+    #fffbfeff,
+    #26c485ff,
+    #32908fff,
+    #724cf9ff,
+    #000000ff
+  );
+  --gradient-right: linear-gradient(
+    90deg,
+    #fffbfeff,
+    #26c485ff,
+    #32908fff,
+    #724cf9ff,
+    #000000ff
+  );
+  --gradient-bottom: linear-gradient(
+    180deg,
+    #fffbfeff,
+    #26c485ff,
+    #32908fff,
+    #724cf9ff,
+    #000000ff
+  );
+  --gradient-left: linear-gradient(
+    270deg,
+    #fffbfeff,
+    #26c485ff,
+    #32908fff,
+    #724cf9ff,
+    #000000ff
+  );
+  --gradient-top-right: linear-gradient(
+    45deg,
+    #fffbfeff,
+    #26c485ff,
+    #32908fff,
+    #724cf9ff,
+    #000000ff
+  );
+  --gradient-bottom-right: linear-gradient(
+    135deg,
+    #fffbfeff,
+    #26c485ff,
+    #32908fff,
+    #724cf9ff,
+    #000000ff
+  );
+  --gradient-top-left: linear-gradient(
+    225deg,
+    #fffbfeff,
+    #26c485ff,
+    #32908fff,
+    #724cf9ff,
+    #000000ff
+  );
+  --gradient-bottom-left: linear-gradient(
+    315deg,
+    #fffbfeff,
+    #26c485ff,
+    #32908fff,
+    #724cf9ff,
+    #000000ff
+  );
+  --gradient-radial: radial-gradient(
+    #fffbfeff,
+    #26c485ff,
+    #32908fff,
+    #724cf9ff,
+    #000000ff
+  );
+}
+
+body {
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+}
+
+.bg-img-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.bg-img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.bg-img-box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: var(--blue);
+  opacity: 0.2;
+}
+
+.header {
+  height: 4rem;
+  background-color: var(--black);
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  color: var(--snow);
+  z-index: 2;
+  justify-content: space-between;
+}
+
+.header > * {
+  padding: 2rem;
+}
+
+.header::after {
+  position: absolute;
+  bottom: -3px;
+  content: "";
+  height: 3px;
+  width: 100%;
+  background-image: linear-gradient(
+    to right,
+    #fd004c,
+    #fe9000,
+    #fff020,
+    #3edf4b,
+    #3363ff,
+    #b102b7
+  );
+}
+
+.header__title {
+  /* font-family: "VT323", monospace; */
+  font-size: 3rem;
+  font-style: italic;
+  margin: 0;
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+}
+
+#github-contact {
+  margin-right: 1rem;
+}
+
+.header__contact-img {
+  max-height: 2.2rem;
+  max-width: 2.2rem;
+}
+
+.header__contact-img img {
+  width: 100%;
+  transition: all 0.2s;
+}
+
+.header__contact-img img:hover {
+  filter: opacity(50%) grayscale(100%);
+}
+
+.main {
+  padding: 0 5rem;
+  max-width: 100rem;
+  margin: 0 auto;
+}
+
+.main__desc {
+  text-align: center;
+  display: flex;
+}
+
+.main__desc-photo {
+  background-color: lightpink;
+  width: 12rem;
+  height: 12rem;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 100%;
+  border: 3px solid var(--blue);
+}
+
+.main__desc-photo img {
+  width: 100%;
+}
+
+.footer {
+  width: 100%;
+  background-color: var(--snow);
+  height: 4rem;
+  background-color: var(--black);
+}
+
+.title {
+  position: relative;
+  display: inline-block;
+  font-family: "Roboto Mono";
+}
+
+.title-box::before {
+  /* content: "root@c3sar:~# "; */
+  content: "[root@c3sar ~]$";
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.title::before,
+.title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+.title::before {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: var(--snow);
+}
+
+.title-1::before,
+.title-2::before {
+  animation: typewriter 2s steps(7) infinite;
+}
+
+.title-3::before {
+  animation: typewriter 3s steps(10) infinite;
+}
+
+.title-4::before {
+  animation: typewriter 3s steps(9) infinite;
+}
+
+.title::after {
+  top: 0.5rem;
+  bottom: 0.2rem;
+  width: 0.2rem;
+  background: black;
+}
+
+.title-1::after,
+.title-2::after {
+  animation: typewriter 2s steps(7) infinite, 0.5s blink infinite;
+}
+
+.title-3::after {
+  animation: typewriter 3s steps(10) infinite, 0.5s blink infinite;
+}
+
+.title-4::after {
+  animation: typewriter 3s steps(9) infinite, 0.5s blink infinite;
+}
+
+@keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes blink {
+  to {
+    background: transparent;
+  }
+}
+
+.card {
+  padding: 1rem 2rem;
+  margin: 2rem;
+  background-color: var(--snow);
+  text-align: center;
+  border-radius: 25px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.main__skills {
+}
+
+.main__skills-imgs-box {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  column-gap: 1rem;
+  align-items: stretch;
+}
+
+.main__skill-img {
+  justify-self: center;
+  position: relative;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  max-width: 10rem;
+}
+
+.main__skill-img img {
+  width: 100%;
+  object-fit: scale-down;
+}
+
+.main__education-body ul {
+  list-style: none;
+}
+
+.main__proyects-body {
+  display: flex;
+}
+
+.main__proyect-video {
+  width: 40rem;
+  transition: all 1s;
+  position: relative;
+  overflow: hidden;
+}
+
+.main__proyect-video video {
+  width: 100%;
+}
+
+/*Animations for skills images (commented for now, will finish later)*/
+/*
+.main__skill-img::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--blue);
+  opacity: 0.5;
+  mask-size: cover;
+  -webkit-mask-size: cover;
+  transition: all 1s;
+}
+
+.main__skill-img-1::after {
+  mask-image: url("images/html.png");
+  -webkit-mask-image: url("images/html.png");
+}
+
+.main__skill-img-2::after {
+  mask-image: url("images/css.png");
+  -webkit-mask-image: url("images/css.png");
+}
+
+.main__skill-img-3::after {
+  mask-image: url("images/js.png");
+  -webkit-mask-image: url("images/js.png");
+}
+
+.main__skill-img-4::after {
+  mask-image: url("images/react.png");
+  -webkit-mask-image: url("images/react.png");
+}
+
+.main__skill-img-5::after {
+  mask-image: url("images/python.png");
+  -webkit-mask-image: url("images/python.png");
+}
+
+.main__skill-img-6::after {
+  mask-image: url("images/django.png");
+  -webkit-mask-image: url("images/django.png");
+}
+
+.main__skill-img-1:hover::after {
+  clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+}
+
+.main__skill-img-2:hover::after {
+  clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+}
+
+.main__skill-img-3:hover::after {
+  clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+}
+
+.main__skill-img-4:hover::after {
+  clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+}
+
+.main__skill-img-5:hover::after {
+  clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+}
+
+.main__skill-img-6:hover::after {
+  clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+}
+*/
+
+/*Add skills like docker, github, linux, and turn it into a slide*/
